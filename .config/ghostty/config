@@ -1,0 +1,13 @@
+# Ghostty config
+
+# Theme
+theme = terafox
+
+# Opacity
+background-opacity = 0.95
+
+# Keybinds
+keybind = ctrl+r=reload_config
+
+# Font
+font-family = Hack Nerd Font Mono

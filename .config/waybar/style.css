@@ -1,0 +1,244 @@
+/* __        __          _                  ____  _         _       
+ * \ \      / /_ _ _   _| |__   __ _ _ __  / ___|| |_ _   _| | ___  
+ *  \ \ /\ / / _` | | | | '_ \ / _` | '__| \___ \| __| | | | |/ _ \ 
+ *   \ V  V / (_| | |_| | |_) | (_| | |     ___) | |_| |_| | |  __/ 
+ *    \_/\_/ \__,_|\__, |_.__/ \__,_|_|    |____/ \__|\__, |_|\___| 
+ *                 |___/                              |___/           
+*/
+
+@import "colors.css";
+
+/* -----------------------------------------------------
+ * General 
+ * ----------------------------------------------------- */
+
+* {
+  	font-family: JetBrainsMono Nerd Font;
+    border: none;
+    border-radius: 0px;
+}
+
+window#waybar {
+    background-color: rgba(66,66,66,0.4);
+    border-bottom: 0px solid #ffffff;
+    transition-property: background-color;
+    transition-duration: .5s;
+    border-radius: 50px;
+}
+
+/* -----------------------------------------------------
+ * Workspaces 
+ * ----------------------------------------------------- */
+
+#workspaces {
+    margin: 5px 1px 6px 1px;
+    padding: 0px 1px;
+    border-radius: 15px;
+    border: 0px;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 16px;
+    color: @surface0;
+}
+
+#workspaces button {
+    padding: 0px 5px;
+    margin: 4px 3px;
+    border-radius: 15px;
+    border: 0px;
+    color: @blue;
+    transition: all 0.3s ease-in-out;
+}
+
+#workspaces button.active {
+    color: @sapphire;
+    background: @base;
+    border-radius: 15px;
+    min-width: 40px;
+    transition: all 0.3s ease-in-out;
+}
+
+#workspaces button:hover {
+    color: @sapphire;
+    background: @base;
+    border-radius: 15px;
+}
+
+/* -----------------------------------------------------
+ * Tooltips
+ * ----------------------------------------------------- */
+
+tooltip {
+    border-radius: 10px;
+    background-color: @base;
+    opacity:0.8;
+    padding:20px;
+    margin:0px;
+}
+
+tooltip label {
+    color: @text;
+}
+
+/* -----------------------------------------------------
+ * Window
+ * ----------------------------------------------------- */
+
+#window {
+    background:transparent;
+    margin: 10px 15px 10px 0px;
+    padding: 2px 10px 0px 10px;
+    border-radius: 12px;
+    color:@surface0;
+    font-size:16px;
+    font-weight:normal;
+}
+
+window#waybar.empty #window {
+    background-color:transparent;
+}
+
+/* -----------------------------------------------------
+ * Modules
+ * ----------------------------------------------------- */
+
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0;
+}
+
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 0;
+}
+
+/* -----------------------------------------------------
+ * Custom App-menu
+ * ----------------------------------------------------- */
+ 
+#custom-appmenu {
+    font-size: 35px;
+    margin-left: 20px;
+    margin-right: 10px;
+    color: @sky;
+}
+
+/* -----------------------------------------------------
+ * Taskbar
+ * ----------------------------------------------------- */
+
+#taskbar {
+	margin: 5px 10px 5px 20px;
+	border-radius: 15px;
+}
+
+#taskbar button {
+	margin: 0;
+	border-radius: 15px;
+}
+
+/* -----------------------------------------------------
+ * CPU
+ * ----------------------------------------------------- */
+
+#cpu {
+    background-color: @base;
+    font-size: 16px;
+    color: @teal;
+    border-radius: 15px;
+    margin: 10px 7px 10px 0px;
+}
+
+/* -----------------------------------------------------
+ * Network
+ * ----------------------------------------------------- */
+
+#network {
+    background-color: @base;
+    font-size: 16px;
+    color: @text;
+    border-radius: 15px;
+	padding: 0px 15px 0px 12px;
+    margin: 10px 7px 10px 0px;
+}
+
+#network.ethernet {
+    background-color: @base;
+    color: @teal;
+}
+
+#network.wifi {
+    background-color: @base;
+    color: @teal;
+}
+
+#network.disconnected {
+    background-color: @maroon;
+    color: @mantle;
+}
+
+/* -----------------------------------------------------
+ * Pulseaudio
+ * ----------------------------------------------------- */
+
+#pulseaudio {
+    background-color: @base;
+    font-size: 16px;
+    color: @teal;
+    border-radius: 15px;
+    margin: 10px 7px 10px 0px;
+}
+
+#pulseaudio.muted {
+    background-color: @base;
+    color: @maroon;
+}
+
+/* -----------------------------------------------------
+ * Clock
+ * ----------------------------------------------------- */
+
+#clock {
+    background-color: @base;
+    font-size: 16px;
+    color: @teal;
+    border-radius: 15px;
+    margin: 10px 7px 10px 0px;
+}
+
+/* -----------------------------------------------------
+ * Custom Exit
+ * ----------------------------------------------------- */
+ 
+#custom-exit {
+    font-size: 25px;
+    margin-left: 10px;
+    margin-right: 20px;
+    color: @sky;
+}
+
+/* -----------------------------------------------------
+ * Tray
+ * ----------------------------------------------------- */
+
+#tray {
+    margin:0px 10px 0px 0px;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+}
+
+/* -----------------------------------------------------
+ * Other
+ * ----------------------------------------------------- */
+
+label:focus {
+    background-color: #000000;
+}
+
+#backlight {
+    background-color: #90b1b1;
+}

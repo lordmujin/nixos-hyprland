@@ -1,0 +1,97 @@
+// ~/.config/fastfetch/config.jsonc
+// See https://github.com/fastfetch-cli/fastfetch/wiki/Configuration for more details
+// See *.jsonc in https://github.com/fastfetch-cli/fastfetch/tree/dev/presets/examples for more examples
+{
+    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+    "logo": {
+		"padding": {
+			"top": 2,
+			"left": 2,
+			"right": 2
+		}
+    },
+"general": {
+    "multithreading": true
+  },
+  "display": {
+    "separator": "➜   "
+  },
+  "modules": [
+    "break",
+    {
+      "type": "title",
+      "format": "                                {6}{7}{8}"
+    },
+    "break",
+    {
+      "type": "custom",
+      "format": "┌───────────────────────────────────────────────────────────────────────────┐" // `\u001b` is `\033`, or `\e`
+    },
+    "break",
+    {
+      "key": "     OS           ",
+      "keyColor": "green",
+      "type": "os"
+    },
+    {
+      "key": "     Kernel       ",
+      "keyColor": "cyan",
+      "type": "kernel"
+    },
+    {
+      "key": "     Resolution   ",
+      "keyColor": "blue",
+      "type": "display"
+    },
+    {
+      "key": "    󰍛 GPU          ",
+      "keyColor": "green",
+      "type": "gpu"
+    },
+    {
+      "key": "    󰍛 Driver       ",
+      "keyColor": "cyan",
+      "type": "opengl"
+    },
+    {
+      "key": "    󰻠 CPU          ",
+      "keyColor": "blue",
+      "type": "cpu"
+    },
+    {
+      "key": "    󰑭 Memory       ",
+      "keyColor": "green",
+      "type": "memory"
+    },
+    {
+      "key": "     WM           ",
+      "keyColor": "cyan",
+      "type": "wm"
+    },
+    {
+      "key": "     Shell        ",
+      "keyColor": "blue",
+      "type": "shell"
+    },
+    {
+      "key": "     Terminal     ",
+      "keyColor": "green",
+      "type": "terminal"
+    },
+    {
+      "key": "     Packages     ",
+      "keyColor": "cyan",
+      "type": "packages"
+    },
+    {
+      "key": "     Icons        ",
+      "keyColor": "blue",
+      "type": "icons"
+    },
+    "break",
+    {
+      "type": "custom",
+      "format": "└───────────────────────────────────────────────────────────────────────────┘" // `\u001b` is `\033`, or `\e`
+    },
+  ]
+}
